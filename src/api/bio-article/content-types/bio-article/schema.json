@@ -33,7 +33,7 @@
       "required": true
     },
     "tags": {
-      "type": "json",
+      "type": "text",
       "required": false
     },
     "featured": {
@@ -46,21 +46,53 @@
       "default": false,
       "required": true
     },
-    "seo": {
-      "type": "json",
+    "heroTitle": {
+      "type": "string",
       "required": true
     },
-    "hero": {
-      "type": "json",
+    "heroSubtitle": {
+      "type": "string",
       "required": true
     },
-    "profile": {
-      "type": "json",
+    "seoTitle": {
+      "type": "string",
       "required": true
     },
-    "social": {
-      "type": "json",
+    "seoDescription": {
+      "type": "text",
       "required": true
+    },
+    "seoKeywords": {
+      "type": "text",
+      "required": false
+    },
+    "profileName": {
+      "type": "string",
+      "required": true
+    },
+    "profileTitle": {
+      "type": "string",
+      "required": true
+    },
+    "profileLocation": {
+      "type": "string",
+      "required": true
+    },
+    "profileStatus": {
+      "type": "string",
+      "required": true
+    },
+    "socialLinkedin": {
+      "type": "string",
+      "required": false
+    },
+    "socialEmail": {
+      "type": "email",
+      "required": false
+    },
+    "socialPortfolio": {
+      "type": "string",
+      "required": false
     }
   }
 } 
