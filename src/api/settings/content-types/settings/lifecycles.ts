@@ -5,22 +5,22 @@
 
 export default {
   async afterCreate(event: any) {
-    await triggerWebhook('entry.create', 'site-settings', event.result);
+    await triggerWebhook('entry.create', 'settings', event.result);
   },
 
   async afterUpdate(event: any) {
-    await triggerWebhook('entry.update', 'site-settings', event.result);
+    await triggerWebhook('entry.update', 'settings', event.result);
     
     // Handle publish/unpublish within afterUpdate
     if (event.result.publishedAt && !event.params.data.publishedAt) {
-      await triggerWebhook('entry.publish', 'site-settings', event.result);
+      await triggerWebhook('entry.publish', 'settings', event.result);
     } else if (!event.result.publishedAt && event.params.data.publishedAt) {
-      await triggerWebhook('entry.unpublish', 'site-settings', event.result);
+      await triggerWebhook('entry.unpublish', 'settings', event.result);
     }
   },
 
   async afterDelete(event: any) {
-    await triggerWebhook('entry.delete', 'site-settings', event.result);
+    await triggerWebhook('entry.delete', 'settings', event.result);
   },
 };
 
