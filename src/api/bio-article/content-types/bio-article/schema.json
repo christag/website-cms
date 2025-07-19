@@ -1,0 +1,66 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bio_articles",
+  "info": {
+    "singularName": "bio-article",
+    "pluralName": "bio-articles",
+    "displayName": "Bio Article",
+    "description": "Bio and about page content"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "richtext",
+      "required": true
+    },
+    "publishDate": {
+      "type": "date",
+      "required": true
+    },
+    "author": {
+      "type": "string",
+      "required": true
+    },
+    "tags": {
+      "type": "json",
+      "required": false
+    },
+    "featured": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "draft": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "seo": {
+      "type": "json",
+      "required": true
+    },
+    "hero": {
+      "type": "json",
+      "required": true
+    },
+    "profile": {
+      "type": "json",
+      "required": true
+    },
+    "social": {
+      "type": "json",
+      "required": true
+    }
+  }
+} 
