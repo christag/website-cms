@@ -1,10 +1,10 @@
 {
   "kind": "singleType",
-  "collectionName": "site_settings",
+  "collectionName": "settings",
   "info": {
-    "singularName": "site-setting",
-    "pluralName": "site-setting",
-    "displayName": "Site Settings",
+    "singularName": "settings",
+    "pluralName": "settings",
+    "displayName": "Site Settings", 
     "description": "Global site configuration and defaults"
   },
   "options": {

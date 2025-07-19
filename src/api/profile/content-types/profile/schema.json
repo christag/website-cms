@@ -1,9 +1,9 @@
 {
   "kind": "singleType",
-  "collectionName": "author_profile",
+  "collectionName": "profile",
   "info": {
-    "singularName": "author-profile",
-    "pluralName": "author-profile",
+    "singularName": "profile",
+    "pluralName": "profiles", 
     "displayName": "Author Profile",
     "description": "Centralized author information - your 'me' object"
   },
