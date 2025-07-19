@@ -2,8 +2,8 @@
   "kind": "singleType",
   "collectionName": "site_settings",
   "info": {
-    "singularName": "site-settings",
-    "pluralName": "site-settings",
+    "singularName": "site-setting",
+    "pluralName": "site-setting",
     "displayName": "Site Settings",
     "description": "Global site configuration and defaults"
   },

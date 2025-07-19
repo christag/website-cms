@@ -3,7 +3,7 @@
   "collectionName": "author_profile",
   "info": {
     "singularName": "author-profile",
-    "pluralName": "author-profiles",
+    "pluralName": "author-profile",
     "displayName": "Author Profile",
     "description": "Centralized author information - your 'me' object"
   },
