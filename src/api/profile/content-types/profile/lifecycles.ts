@@ -10,18 +10,17 @@ export default {
 
   async afterUpdate(event: any) {
     await triggerWebhook('entry.update', 'author-profile', event.result);
+    
+    // Handle publish/unpublish within afterUpdate
+    if (event.result.publishedAt && !event.params.data.publishedAt) {
+      await triggerWebhook('entry.publish', 'author-profile', event.result);
+    } else if (!event.result.publishedAt && event.params.data.publishedAt) {
+      await triggerWebhook('entry.unpublish', 'author-profile', event.result);
+    }
   },
 
   async afterDelete(event: any) {
     await triggerWebhook('entry.delete', 'author-profile', event.result);
-  },
-
-  async afterPublish(event: any) {
-    await triggerWebhook('entry.publish', 'author-profile', event.result);
-  },
-
-  async afterUnpublish(event: any) {
-    await triggerWebhook('entry.unpublish', 'author-profile', event.result);
   },
 };
 
