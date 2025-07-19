@@ -1,0 +1,62 @@
+{
+  "kind": "singleType",
+  "collectionName": "site_settings",
+  "info": {
+    "singularName": "site-settings",
+    "pluralName": "site-settings",
+    "displayName": "Site Settings",
+    "description": "Global site configuration and defaults"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "siteTitle": {
+      "type": "string",
+      "required": true,
+      "default": "Christopher Tagliaferro - Technical Program Manager"
+    },
+    "siteDescription": {
+      "type": "text",
+      "required": true,
+      "default": "Senior TPM with 12+ years driving technology transformations that actually work."
+    },
+    "defaultSEO": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo-data"
+    },
+    "globalSocialLinks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.social-link"
+    },
+    "globalContactInfo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.contact-info"
+    },
+    "brandColors": {
+      "type": "json",
+      "required": false
+    },
+    "logos": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "defaultImages": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "defaultHero": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.hero-data"
+    }
+  }
+} 

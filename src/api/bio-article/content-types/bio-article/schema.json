@@ -5,7 +5,7 @@
     "singularName": "bio-article",
     "pluralName": "bio-articles",
     "displayName": "Bio Article",
-    "description": "Bio and about page content"
+    "description": "Simplified bio articles with automated field population"
   },
   "options": {
     "draftAndPublish": true
@@ -28,70 +28,26 @@
       "type": "date",
       "required": true
     },
-    "author": {
-      "type": "string",
-      "required": true
-    },
     "tags": {
       "type": "text",
-      "required": false
+      "required": false,
+      "description": "Comma-separated tags"
     },
     "featured": {
       "type": "boolean",
       "default": false,
       "required": true
     },
-    "draft": {
-      "type": "boolean",
-      "default": false,
-      "required": true
-    },
-    "heroTitle": {
-      "type": "string",
-      "required": true
-    },
-    "heroSubtitle": {
-      "type": "string",
-      "required": true
-    },
-    "seoTitle": {
-      "type": "string",
-      "required": true
-    },
-    "seoDescription": {
-      "type": "text",
-      "required": true
-    },
-    "seoKeywords": {
-      "type": "text",
+    "seoOverride": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo-data",
       "required": false
     },
-    "profileName": {
-      "type": "string",
-      "required": true
-    },
-    "profileTitle": {
-      "type": "string",
-      "required": true
-    },
-    "profileLocation": {
-      "type": "string",
-      "required": true
-    },
-    "profileStatus": {
-      "type": "string",
-      "required": true
-    },
-    "socialLinkedin": {
-      "type": "string",
-      "required": false
-    },
-    "socialEmail": {
-      "type": "email",
-      "required": false
-    },
-    "socialPortfolio": {
-      "type": "string",
+    "heroOverride": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.hero-data",
       "required": false
     }
   }

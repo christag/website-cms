@@ -1,0 +1,51 @@
+{
+  "collectionName": "components_shared_timeline_events",
+  "info": {
+    "displayName": "Timeline Event",
+    "description": "Reusable timeline event component"
+  },
+  "options": {},
+  "attributes": {
+    "date": {
+      "type": "date",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "richtext",
+      "required": false
+    },
+    "period": {
+      "type": "string",
+      "required": false,
+      "description": "e.g., 'Early Career', 'Present'"
+    },
+    "achievements": {
+      "type": "json",
+      "required": false,
+      "description": "Array of achievement strings"
+    },
+    "media": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": ["images", "files", "videos"]
+    },
+    "isActive": {
+      "type": "boolean",
+      "default": false,
+      "description": "Is this the current/active position?"
+    },
+    "company": {
+      "type": "string",
+      "required": false
+    },
+    "location": {
+      "type": "string",
+      "required": false
+    }
+  }
+} 

@@ -1,0 +1,53 @@
+{
+  "collectionName": "components_shared_hero_data",
+  "info": {
+    "displayName": "Hero Data",
+    "description": "Reusable hero section component"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "subtitle": {
+      "type": "string",
+      "required": false
+    },
+    "animation": {
+      "type": "enumeration",
+      "enum": [
+        "particle-name",
+        "gradient-chaos",
+        "glass-shatter",
+        "code-rain",
+        "none"
+      ],
+      "default": "particle-name"
+    },
+    "backgroundImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "backgroundType": {
+      "type": "enumeration",
+      "enum": [
+        "gradient-chaos",
+        "solid",
+        "image",
+        "video"
+      ],
+      "default": "gradient-chaos"
+    },
+    "ctaText": {
+      "type": "string",
+      "required": false
+    },
+    "ctaUrl": {
+      "type": "string",
+      "required": false
+    }
+  }
+} 

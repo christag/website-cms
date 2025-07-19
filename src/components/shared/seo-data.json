@@ -1,0 +1,54 @@
+{
+  "collectionName": "components_shared_seo_data",
+  "info": {
+    "displayName": "SEO Data",
+    "description": "Reusable SEO metadata component"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "keywords": {
+      "type": "text",
+      "required": false,
+      "description": "Comma-separated keywords"
+    },
+    "ogTitle": {
+      "type": "string",
+      "required": false,
+      "description": "Open Graph title override"
+    },
+    "ogDescription": {
+      "type": "text",
+      "required": false,
+      "description": "Open Graph description override"
+    },
+    "ogImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "twitterCard": {
+      "type": "enumeration",
+      "enum": [
+        "summary",
+        "summary_large_image",
+        "app",
+        "player"
+      ],
+      "default": "summary_large_image"
+    },
+    "canonical": {
+      "type": "string",
+      "required": false,
+      "description": "Canonical URL override"
+    }
+  }
+} 

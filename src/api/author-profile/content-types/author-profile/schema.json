@@ -1,0 +1,66 @@
+{
+  "kind": "singleType",
+  "collectionName": "author_profile",
+  "info": {
+    "singularName": "author-profile",
+    "pluralName": "author-profiles",
+    "displayName": "Author Profile",
+    "description": "Centralized author information - your 'me' object"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "fullName": {
+      "type": "string",
+      "required": true,
+      "default": "Christopher Tagliaferro"
+    },
+    "bio": {
+      "type": "richtext",
+      "required": false
+    },
+    "avatar": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "role": {
+      "type": "string",
+      "required": true,
+      "default": "Senior Technical Program Manager"
+    },
+    "location": {
+      "type": "string",
+      "required": true,
+      "default": "Levittown, NY"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "Open to Opportunities",
+        "Currently Employed",
+        "Consulting Available",
+        "Not Available"
+      ],
+      "default": "Open to Opportunities",
+      "required": true
+    },
+    "socialLinks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.social-link"
+    },
+    "contactInfo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.contact-info"
+    },
+    "timeline": {
+      "type": "dynamiczone",
+      "components": ["shared.timeline-event"]
+    }
+  }
+} 

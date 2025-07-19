@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_shared_social_links",
+  "info": {
+    "displayName": "Social Link",
+    "description": "Reusable social media link component"
+  },
+  "options": {},
+  "attributes": {
+    "platform": {
+      "type": "enumeration",
+      "enum": [
+        "LinkedIn",
+        "GitHub",
+        "Twitter",
+        "Email",
+        "Portfolio",
+        "Phone",
+        "Other"
+      ],
+      "required": true
+    },
+    "url": {
+      "type": "string",
+      "required": true
+    },
+    "icon": {
+      "type": "string",
+      "required": false,
+      "description": "Icon name or SVG code"
+    },
+    "displayText": {
+      "type": "string",
+      "required": false,
+      "description": "Optional display text override"
+    }
+  }
+} 
