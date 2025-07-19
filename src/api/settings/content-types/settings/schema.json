@@ -3,7 +3,7 @@
   "collectionName": "settings",
   "info": {
     "singularName": "settings",
-    "pluralName": "settings",
+    "pluralName": "site-settings",
     "displayName": "Site Settings", 
     "description": "Global site configuration and defaults"
   },
