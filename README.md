@@ -526,3 +526,4 @@ This project is private and proprietary. All rights reserved.
 **Built with ❤️ by Tags** | **CMS URL**: https://your-railway-domain.up.railway.app | **Admin**: https://your-railway-domain.up.railway.app/admin
 
 **Updated**: January 2025 | **Status**: Production Ready | **Version**: Strapi 5.18.1
+# Trigger deployment
