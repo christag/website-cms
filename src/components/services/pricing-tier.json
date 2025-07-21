@@ -1,0 +1,40 @@
+{
+  "collectionName": "components_services_pricing_tiers",
+  "info": {
+    "displayName": "Pricing Tier",
+    "description": "Service pricing tier with deliverables"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "description": "Name of the pricing tier (e.g., 'Basic', 'Professional', 'Enterprise')"
+    },
+    "priceLow": {
+      "type": "decimal",
+      "required": false,
+      "description": "Starting price for this tier"
+    },
+    "priceHigh": {
+      "type": "decimal",
+      "required": false,
+      "description": "Ending price for this tier (if price range)"
+    },
+    "deliverables": {
+      "type": "json",
+      "required": false,
+      "description": "List of deliverables included in this tier"
+    },
+    "description": {
+      "type": "text",
+      "required": false,
+      "description": "Additional description for this tier"
+    },
+    "recommended": {
+      "type": "boolean",
+      "default": false,
+      "description": "Mark this tier as recommended/popular"
+    }
+  }
+} 
