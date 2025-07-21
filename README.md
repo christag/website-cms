@@ -44,9 +44,18 @@ Global site configuration:
 **API Endpoint**: `/api/bio-articles`
 
 Dynamic content pieces for the bio section:
-- Article title and content
+- Article title and content (richtext field, not markdown)
 - Publication status
 - Metadata and timestamps
+
+### Services (Collection Type)
+**API Endpoint**: `/api/services`
+
+IT consulting and technology services:
+- Title, slug, and description
+- Category and feature highlights (JSON)
+- Tiered pricing with deliverables (component)
+- Contact method and pinned status
 
 ## 🚀 Quick Start
 
@@ -165,13 +174,29 @@ website-cms/
 │   │       │   └── settings.js
 │   │       └── services/
 │   │           └── settings.js
+│   │   └── service/         # Services (collection type)
+│   │       ├── content-types/
+│   │       │   └── service/
+│   │       │       ├── index.js
+│   │       │       └── schema.json
+│   │       ├── controllers/
+│   │       │   └── service.js
+│   │       ├── routes/
+│   │       │   └── service.js
+│   │       └── services/
+│   │           └── service.js
 │   ├── components/
-│   │   └── shared/          # Reusable components
-│   │       ├── contact-info.json
-│   │       ├── hero-data.json
-│   │       ├── seo-data.json
-│   │       ├── social-link.json
-│   │       └── timeline-event.json
+│   │   ├── shared/          # Reusable components
+│   │   │   ├── contact-info.json
+│   │   │   ├── hero-data.json
+│   │   │   ├── seo-data.json
+│   │   │   ├── social-link.json
+│   │   │   └── timeline-event.json
+│   │   ├── services/        # Service-specific components
+│   │   │   └── pricing-tier.json
+│   │   └── portfolio/       # Portfolio components
+│   │       ├── collaborator.json
+│   │       └── testimonial.json
 │   ├── extensions/          # Plugin extensions
 │   └── index.ts            # Entry point
 ├── public/
@@ -192,6 +217,8 @@ website-cms/
 | `/api/settings` | GET | Get site settings (single type) |
 | `/api/bio-articles` | GET | Get all bio articles |
 | `/api/bio-articles/:id` | GET | Get specific bio article |
+| `/api/services` | GET | Get all services |
+| `/api/services/:id` | GET | Get specific service |
 
 ### Query Parameters
 

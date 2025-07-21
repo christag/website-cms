@@ -1,0 +1,75 @@
+{
+  "kind": "collectionType",
+  "collectionName": "services",
+  "info": {
+    "singularName": "service",
+    "pluralName": "services",
+    "displayName": "Service",
+    "description": "IT consulting and technology services"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "description": "Service name"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true,
+      "description": "Service description"
+    },
+    "category": {
+      "type": "string",
+      "required": false,
+      "description": "Service category (e.g., Leadership, Development, Support)"
+    },
+    "isPinned": {
+      "type": "boolean",
+      "default": false,
+      "required": true,
+      "description": "Featured service flag"
+    },
+    "featureHighlights": {
+      "type": "json",
+      "required": false,
+      "description": "Array of feature strings"
+    },
+    "tiers": {
+      "type": "component",
+      "repeatable": true,
+      "component": "services.pricing-tier",
+      "required": false
+    },
+    "contactMethod": {
+      "type": "enumeration",
+      "enum": ["email", "calendar", "phone", "custom"],
+      "required": false,
+      "description": "Contact method type"
+    },
+    "customContactLink": {
+      "type": "string",
+      "required": false,
+      "description": "Custom contact URL if contactMethod is custom"
+    },
+    "order": {
+      "type": "integer",
+      "required": false,
+      "description": "Sort order for manual ordering"
+    },
+    "seoOverride": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo-data",
+      "required": false
+    }
+  }
+} 
