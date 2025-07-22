@@ -12,7 +12,8 @@
     "start": "strapi start",
     "strapi": "strapi",
     "upgrade": "npx @strapi/upgrade latest",
-    "upgrade:dry": "npx @strapi/upgrade latest --dry"
+    "upgrade:dry": "npx @strapi/upgrade latest --dry",
+    "postinstall": "strapi db:migrate || echo 'Migration skipped'"
   },
   "dependencies": {
     "@strapi/plugin-cloud": "5.18.1",
