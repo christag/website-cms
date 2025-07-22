@@ -8,6 +8,7 @@ export default ({ env }) => {
     console.log('Database configuration debug:');
     console.log('CLIENT:', client);
     console.log('DATABASE_URL exists:', !!env('DATABASE_URL'));
+    console.log('DATABASE_PRIVATE_URL exists:', !!env('DATABASE_PRIVATE_URL'));
     console.log('DATABASE_HOST:', env('DATABASE_HOST', 'not-set'));
     console.log('DATABASE_PORT:', env('DATABASE_PORT', 'not-set'));
     console.log('DATABASE_NAME:', env('DATABASE_NAME', 'not-set'));
@@ -34,8 +35,11 @@ export default ({ env }) => {
     },
     postgres: {
       connection: {
-        // Prioritize DATABASE_URL for Railway
-        ...(env('DATABASE_URL') ? {
+        // Prioritize DATABASE_PRIVATE_URL for Railway private networking to avoid egress fees
+        // Fall back to DATABASE_URL (public) if private URL not available
+        ...(env('DATABASE_PRIVATE_URL') ? {
+          connectionString: env('DATABASE_PRIVATE_URL'),
+        } : env('DATABASE_URL') ? {
           connectionString: env('DATABASE_URL'),
         } : {
           host: env('DATABASE_HOST', 'localhost'),
