@@ -1,0 +1,138 @@
+{
+  "kind": "collectionType",
+  "collectionName": "portfolios",
+  "info": {
+    "singularName": "portfolio",
+    "pluralName": "portfolios",
+    "displayName": "Portfolio Item",
+    "description": "Portfolio media items for the dynamic grid display"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "content-manager": {
+      "visible": true
+    },
+    "content-type-builder": {
+      "visible": true
+    }
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "description": "Project or media title"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true,
+      "description": "Brief project description"
+    },
+    "content": {
+      "type": "richtext",
+      "required": false,
+      "description": "Detailed project content"
+    },
+    "mediaType": {
+      "type": "enumeration",
+      "enum": ["code", "video", "blog", "audio", "image", "design", "presentation"],
+      "required": true,
+      "description": "Type of media/project"
+    },
+    "tags": {
+      "type": "text",
+      "required": false,
+      "description": "Comma-separated tags for filtering"
+    },
+    "technologies": {
+      "type": "text",
+      "required": false,
+      "description": "Comma-separated list of technologies used"
+    },
+    "featuredImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"],
+      "description": "Main project image/screenshot"
+    },
+    "gallery": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": ["images", "videos"],
+      "description": "Additional project media"
+    },
+    "demoUrl": {
+      "type": "string",
+      "required": false,
+      "description": "Live demo URL"
+    },
+    "repositoryUrl": {
+      "type": "string",
+      "required": false,
+      "description": "GitHub or source code URL"
+    },
+    "externalUrl": {
+      "type": "string",
+      "required": false,
+      "description": "Other relevant URL"
+    },
+    "featured": {
+      "type": "boolean",
+      "default": false,
+      "required": true,
+      "description": "Featured project flag"
+    },
+    "completed": {
+      "type": "boolean",
+      "default": true,
+      "required": true,
+      "description": "Project completion status"
+    },
+    "startDate": {
+      "type": "date",
+      "required": false,
+      "description": "Project start date"
+    },
+    "endDate": {
+      "type": "date",
+      "required": false,
+      "description": "Project completion date"
+    },
+    "client": {
+      "type": "string",
+      "required": false,
+      "description": "Client or company name"
+    },
+    "collaborators": {
+      "type": "component",
+      "repeatable": true,
+      "component": "portfolio.collaborator",
+      "required": false
+    },
+    "testimonials": {
+      "type": "component",
+      "repeatable": true,
+      "component": "portfolio.testimonial",
+      "required": false
+    },
+    "priority": {
+      "type": "integer",
+      "required": false,
+      "description": "Display priority (lower number = higher priority)"
+    },
+    "seoOverride": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo-data",
+      "required": false
+    }
+  }
+} 
