@@ -4,6 +4,7 @@
   "private": true,
   "description": "A Strapi application",
   "scripts": {
+    "prebuild": "rm -rf .cache dist build || echo 'Cache cleanup skipped'",
     "build": "strapi build",
     "console": "strapi console",
     "deploy": "strapi deploy",
