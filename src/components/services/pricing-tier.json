@@ -22,9 +22,9 @@
       "description": "Ending price for this tier (if price range)"
     },
     "deliverables": {
-      "type": "json",
+      "type": "text",
       "required": false,
-      "description": "List of deliverables included in this tier"
+      "description": "JSON string of deliverables included in this tier (will be parsed in frontend)"
     },
     "description": {
       "type": "text",

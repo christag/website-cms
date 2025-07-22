@@ -46,9 +46,9 @@
       "description": "Featured service flag"
     },
     "featureHighlights": {
-      "type": "json",
+      "type": "text",
       "required": false,
-      "description": "Array of feature strings"
+      "description": "JSON string of feature highlights (will be parsed in frontend)"
     },
     "tiers": {
       "type": "component",
